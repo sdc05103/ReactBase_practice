@@ -10,7 +10,7 @@ import FocusInputButton from "./components/RegisterInputButton";
 import PrimeCalculator from "./components/PrimeCalculator";
 import InputFieldWithColorPicker from "./components/TodoApp";
 // import TodoApp from "./components/Todo/TodoApp copy";
-import TodoApp from "./components/Todo_list/TodoApp";
+import TodoApp from "./components/Todo/TodoAppVer2";
 
 // function App() {
 //   const [showCount, setShowCount] = useState(true);
