@@ -9,7 +9,8 @@ import { useState } from "react";
 import FocusInputButton from "./components/RegisterInputButton";
 import PrimeCalculator from "./components/PrimeCalculator";
 import InputFieldWithColorPicker from "./components/TodoApp";
-import TodoApp from "./components/Todo/TodoApp copy";
+// import TodoApp from "./components/Todo/TodoApp copy";
+import TodoApp from "./components/Todo_list/TodoApp";
 
 // function App() {
 //   const [showCount, setShowCount] = useState(true);

@@ -41,7 +41,7 @@ export default function TodoApp() {
         <h1>Todo App</h1>
         <div>
           <input
-            style={{ backgroundColor: activeColor, width: "500px" }}
+            style={{ backgroundColor: activeColor, width: 500 }}
             onChange={handleInputChange}
             value={inputText}
           />
@@ -79,9 +79,9 @@ export default function TodoApp() {
               <div
                 style={{
                   backgroundColor: todo.color,
-                  width: "700px",
-                  height: "50px",
-                  margin: "10px",
+                  width: 700,
+                  height: 50,
+                  margin: 10,
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
