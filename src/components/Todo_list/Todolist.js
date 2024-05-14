@@ -1,17 +1,21 @@
+// TodoList.js
 import React from "react";
 import TodoItem from "./TodoItem";
 
-export default function TodoList({ todoList }) {
+export default function TodoList({ filteredTodoList, handleItemClick, handleEditClick, editText, setEditText }) {
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
-      <h3>Todo List</h3>
-      <div>
-        {todoList.map((todo) => (
-          <TodoItem todo={todo} />
-        ))}
-      </div>
+    <div>
+      {filteredTodoList.map((todo, index) => (
+        <TodoItem
+          key={index} // key는 리스트 항목을 고유하게 식별하는 용도로 사용됨
+          index={index}
+          todo={todo}
+          handleItemClick={handleItemClick}
+          handleEditClick={handleEditClick}
+          editText={editText}
+          setEditText={setEditText}
+        />
+      ))}
     </div>
   );
 }

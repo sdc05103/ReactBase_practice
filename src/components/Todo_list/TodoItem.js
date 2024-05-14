@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function TodoItem({ todo }) {
+export default function TodoItem({ todo, index, handleItemClick, handleEditClick, editText, setEditText }) {
+  const handleChange = (e) => {
+    setEditText(e.target.value);
+  };
+
   return (
     <div
       style={{
@@ -13,7 +17,9 @@ export default function TodoItem({ todo }) {
         alignItems: "center",
       }}
     >
-      {todo.text}
+      <input id={index} type="text" value={todo.text} readOnly={true} onChange={handleChange} />
+      <button onClick={() => handleItemClick(index)}>삭제</button>
+      <button onClick={() => handleEditClick(index)}>수정</button>
     </div>
   );
 }

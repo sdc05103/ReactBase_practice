@@ -11,10 +11,11 @@ import PrimeCalculator from "./components/PrimeCalculator";
 import InputFieldWithColorPicker from "./components/TodoApp";
 // import TodoApp from "./components/Todo/TodoApp copy";
 import TodoApp from "./components/Todo/TodoAppVer2";
+// import TodoApp from "./components/Todo/todo";
 import { ThemeProvider } from "./components/ThemeProvider";
 import ThemeButton from "./components/ThemeButton";
 import MyPage from "./components/MyPage";
-import Button from 'react-bootstrap/Button'
+import Button from "react-bootstrap/Button";
 
 // function App() {
 //   const [showCount, setShowCount] = useState(true);
@@ -44,8 +45,8 @@ function App() {
         <Button variant ="primary">기본</Button>
         <Button variant ="danger">Danger</Button>
         <Button variant ="info">INFO</Button> */}
-        {/* <ThemeButton /> */}
-        {/* <MyPage />
+      {/* <ThemeButton /> */}
+      {/* <MyPage />
       </ThemeProvider> */}
     </div>
   );
