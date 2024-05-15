@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 
 const TodoContext = createContext();
+
 const colors = ["red", "yellow", "pink", "violet"];
 
 export function ThemeProvider({ children }) {
@@ -36,7 +37,8 @@ export function ThemeProvider({ children }) {
   };
 
   // 수정
-  const handleEditClick = (index) => {
+
+  const handleEditClick = (index, editText) => {
     const editState = document.getElementById(index).readOnly;
     if (!editState) {
       const newTodoList = todoList.map((el, i) => {
@@ -60,13 +62,16 @@ export function ThemeProvider({ children }) {
       value={{
         todoList,
         activeColor,
+        colors,
         setActiveColor,
+        setFilteredTodoList,
         inputText,
         setInputText,
         searchText,
         setSearchText,
         filteredTodoList,
         setEditText,
+        setTodoList,
         editText,
         editIndex,
         addTodo,
@@ -84,15 +89,19 @@ export function useTodo() {
   const {
     todoList,
     filteredTodoList,
+    setFilteredTodoList,
     activeColor,
     setActiveColor,
+    colors,
     inputText,
     setInputText,
     searchText,
     setSearchText,
+    setTodoList,
     setEditText,
     editText,
     editIndex,
+    setEditIndex,
     addTodo,
     handleSearch,
     handleEditClick,
@@ -102,14 +111,18 @@ export function useTodo() {
     todoList,
     activeColor,
     setActiveColor,
+    setFilteredTodoList,
+    colors,
     inputText,
     setInputText,
+    setTodoList,
     searchText,
     setSearchText,
     filteredTodoList,
     setEditText,
     editText,
     editIndex,
+    setEditIndex,
     addTodo,
     handleSearch,
     handleEditClick,

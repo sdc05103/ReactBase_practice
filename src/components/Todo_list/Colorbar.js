@@ -3,6 +3,8 @@ import { useTodo } from "./TodoContext";
 
 export default function Colorbar({}) {
   const { colors, setActiveColor } = useTodo();
+  console.log(colors);
+
   return (
     <div style={{ display: "flex" }}>
       {colors.map((color) => (
