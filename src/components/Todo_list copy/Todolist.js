@@ -1,11 +1,8 @@
 // TodoList.js
 import React from "react";
 import TodoItem from "./TodoItem";
-import { useTodo } from "./TodoContext";
 
-// TodoItem을 가져오기 때문에 우선은 훅 적용x
-export default function TodoList({}) {
-  const { filteredTodoList, handleEditClick, handleItemClick, editText, setEditText } = useTodo();
+export default function TodoList({ filteredTodoList, handleItemClick, handleEditClick, editText, setEditText }) {
   return (
     <div>
       {filteredTodoList.map((todo, index) => (

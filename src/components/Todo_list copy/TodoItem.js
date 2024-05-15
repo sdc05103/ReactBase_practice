@@ -1,9 +1,16 @@
 import React from "react";
-import { useTodo } from "./TodoContext";
 
-export default function TodoItem({ todo, index }) {
-  const { handleItemClick, handleEditClick, setEditText } = useTodo();
-
+export default function TodoItem({
+  todo,
+  index,
+  handleItemClick,
+  handleEditClick,
+  setEditText,
+  filteredTodoList,
+  setFilteredTodoList,
+  setEditIndex,
+  editIndex,
+}) {
   const handleChange = (e) => {
     setEditText(e.target.value);
     // setFilteredTodoList(

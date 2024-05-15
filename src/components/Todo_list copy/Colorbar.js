@@ -1,8 +1,6 @@
 import React from "react";
-import { useTodo } from "./TodoContext";
 
-export default function Colorbar({}) {
-  const { colors, setActiveColor } = useTodo();
+export default function Colorbar({ colors, setActiveColor }) {
   return (
     <div style={{ display: "flex" }}>
       {colors.map((color) => (

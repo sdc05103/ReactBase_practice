@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-export default function TodoInput({ inputText, setInputText, addTodo, activeColor }) {
+import { useTodo } from "./TodoContext";
+
+export default function TodoInput() {
+  const { addTodo, activeColor, todoList, setTodoList, setInputText, inputText } = useTodo();
+
+  useEffect(() => {
+    if (todoList && todoList.length > 0) {
+      localStorage.setItem("todoList", JSON.stringify(todoList));
+    }
+  }, [todoList]);
+
+  useEffect(() => {
+    const storedTodoList = JSON.parse(localStorage.getItem("todoList"));
+    if (storedTodoList) {
+      setTodoList(storedTodoList);
+    }
+  }, []);
+
   return (
     <div style={{ marginTop: 50, marginBottom: 20 }}>
       <input
