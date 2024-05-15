@@ -1,8 +1,23 @@
 import React from "react";
 
-export default function TodoItem({ todo, index, handleItemClick, handleEditClick, editText, setEditText }) {
+export default function TodoItem({
+  todo,
+  index,
+  handleItemClick,
+  handleEditClick,
+  setEditText,
+  filteredTodoList,
+  setFilteredTodoList,
+  setEditIndex,
+  editIndex,
+}) {
   const handleChange = (e) => {
     setEditText(e.target.value);
+    // setFilteredTodoList(
+    //   filteredTodoList.map((filteredTodo, idx) =>
+    //     index === idx ? { ...filteredTodo, text: e.target.value } : filteredTodo,
+    //   ),
+    // );
   };
 
   return (
